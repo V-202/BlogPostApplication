@@ -1,7 +1,7 @@
 package com.blog.BlogPostApplication.model;
 
 
-import javax.persistence.*;
+import javax.persistence.*;         //jpa ki library hai
 
 @Entity
 @Table(name = "testTable")              //test_table
