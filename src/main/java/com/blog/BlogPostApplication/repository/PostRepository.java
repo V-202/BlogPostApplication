@@ -37,7 +37,7 @@ public class PostRepository {
             transaction.rollback();
         }
     }
-    public void deletePost(Integer posts){
+    public void deletePost(Integer postId){
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         try {
