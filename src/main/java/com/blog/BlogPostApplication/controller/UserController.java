@@ -2,16 +2,15 @@ package com.blog.BlogPostApplication.controller;
 
 import com.blog.BlogPostApplication.model.Post;
 import com.blog.BlogPostApplication.model.User;
-
+import com.blog.BlogPostApplication.service.PostService;
+import com.blog.BlogPostApplication.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import service.PostService;
-import service.UserService;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
+
+
 import java.util.List;
 
 @Controller
@@ -43,7 +42,7 @@ public class UserController {
 
     @RequestMapping(method = RequestMethod.POST, value = "/users/registration")
     public String userRegistration(User user){
-
+        //Business logic to save the credentials of the given database
         return "redirect:/users/login";
     }
     @RequestMapping( value = "/users/logout")
